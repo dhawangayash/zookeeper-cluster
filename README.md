@@ -31,3 +31,13 @@ service supervisord restart
 ```
 7. This time zookeeper cluster would startup.
 
+
+## Zookeeper
+
+### Check if the current node is zookeeper leader
+```
+echo stat | nc localhost 2181 | grep Mode
+echo srvr | nc localhost 2181 | grep Mode #(From 3.3.0 onwards)
+```
+
+
