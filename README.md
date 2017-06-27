@@ -1,4 +1,4 @@
-Zookeeper cluster setup:
+## Zookeeper cluster setup:
 
 1. Copy the tgz to the box
 2. Create a new user   
