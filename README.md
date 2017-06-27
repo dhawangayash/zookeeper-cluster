@@ -17,8 +17,17 @@ Zookeeper cluster setup:
  sudo chkconfig --add supervisord;
  sudo chkconfig supervisord on
 ```
-4. Create `/media/ephimeral0/log` and `/media/ephimeral0/zookeeper`
-4. Add zoo.cfg box name in the cluster
-5. Create myid file in /media/ephimeral0/zookeeper/myid 
-6. Restart
+4. Update the `supervisord.conf` with zookeeper configs
+4. Create `/media/ephimeral0/log` and `/media/ephimeral0/zookeeper` and change the ownership of these files to `zookeeper` user.
+5. Untar the zoo.tgz
+6. Create myid file in /media/ephimeral0/zookeeper/myid 
+```
+echo "2" > /media/ephemeral0/zookeeper/myid
+# SERVER_ID = 2
+```
+7. Restart the supervisord
+```
+service supervisord restart
+```
+7. This time zookeeper cluster would startup.
 
