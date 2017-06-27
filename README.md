@@ -17,7 +17,9 @@
  sudo chkconfig --add supervisord;
  sudo chkconfig supervisord on
 ```
-4. Update the `supervisord.conf` with zookeeper configs
+4. Check the supervisor script from [supervisor github gist](https://gist.github.com/danmackinlay/176149)
+5. Update the `supervisord.conf` with zookeeper configs
+
 4. Create `/media/ephimeral0/log` and `/media/ephimeral0/zookeeper` and change the ownership of these files to `zookeeper` user.
 5. Untar the zoo.tgz
 6. Create myid file in /media/ephimeral0/zookeeper/myid 
