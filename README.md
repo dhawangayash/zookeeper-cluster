@@ -5,6 +5,7 @@
 	```
 	sudo useradd -m zookeeper
 	```
+    2.1. Copy supervisord script from [supervisord](https://raw.githubusercontent.com/dhawangayash/zookeeper-cluster/master/supervisord) to ```/etc/init.d/supervisord```
 3.	Install supervisor
 ```
  sudo pip install supervisor;
