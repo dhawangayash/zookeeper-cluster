@@ -25,7 +25,7 @@
 6. Create myid file in /media/ephimeral0/zookeeper/myid 
 ```
 echo "2" > /media/ephemeral0/zookeeper/myid
-# SERVER_ID = 2
+;SERVER_ID = 2
 ```
 7. Restart the supervisord
 ```
@@ -42,4 +42,10 @@ echo stat | nc localhost 2181 | grep Mode
 echo srvr | nc localhost 2181 | grep Mode #(From 3.3.0 onwards)
 ```
 
-
+## Kafka
+### Setup Kafka
+1. To setup kafka first modify the etc/kafka/server.properties file. 
+2. Restart supervisord
+```
+service supervisord restart
+```
