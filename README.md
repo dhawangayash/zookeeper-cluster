@@ -13,11 +13,13 @@
  echo_supervisord_conf;
  sudo su -;
  echo_supervisor_conf > /etc/supervisord.conf;
+ curl -o /etc/init.d/supervisord <<URL>>
  chmod a+x /etc/init.d/supervisord;
  ps -ef | grep supervisor;
  sudo service supervisord start;
  sudo chkconfig --add supervisord;
  sudo chkconfig supervisord on
+
 ```
 4. Check the supervisor script from [supervisor github gist](https://gist.github.com/danmackinlay/176149)
 5. Update the `supervisord.conf` with zookeeper configs
